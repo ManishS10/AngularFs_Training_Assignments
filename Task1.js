@@ -1,0 +1,12 @@
+var employeeId = 546457;
+var uname = "Manish";
+var email = "manish.senapati@citiustech.com";
+var age = 25;
+var salary = 45000;
+var employeejob = "Manager";
+var employeedeptno = 10;
+var isPermanentEmployee = true;
+console.log("------------------------------------------------");
+// var strOutput = "User Details  Name : "+ uname +  ", Email : "+ email + ", Age : "+ age + ", Is Valid User : "+ isValidUser;
+var strOutput = "Employee Details  Name : ".concat(uname, ", Email : ").concat(email, ", Age : ").concat(age, ", Is Permanent Employee : ").concat(isPermanentEmployee, ", Employee Job : ").concat(employeejob, "\nDepartment No : ").concat(employeedeptno, " Salary : ").concat(salary);
+console.log(strOutput);
