@@ -1,0 +1,15 @@
+
+
+<fieldset>
+    <legend>Price Calculator</legend>
+
+    Product Name: <input type="text" [(ngModel)]="productName">
+    <hr>
+    Unit Price: <input type="number" [(ngModel)]="unitPrice">
+    <hr>
+    Quantity: <input type ="number" [(ngModel)]="quantity">
+    <hr>
+    <button (click) ="btn_click()">Get Total</button>
+
+    <p [style.color]="getColor()">{{result}}</p>
+</fieldset>
