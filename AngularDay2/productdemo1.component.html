@@ -1,0 +1,38 @@
+
+
+<style>
+    .c1
+    {
+        border: 1px solid gray;
+        border-radius : 10px;
+        width : 150px;
+        padding : 5px;
+        text-align: center;
+        margin: 5px;
+        float:left;
+        box-shadow: 5px 5px 2px black;
+    }
+  </style>
+  
+  <div class="c1" *ngFor = "let item of fpr">
+        
+            <div>
+                
+                Product Id:{{item.pid}}<br>
+                Name :{{item.pname}}<br>
+                Category :{{item.category}}<br>
+                Price :{{item.price}}<br>
+            
+            </div>
+            
+        
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <hr>
