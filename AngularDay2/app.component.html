@@ -18,10 +18,15 @@
 
 <!--<app-department-list></app-department-list> -->
 
-<app-productdemo1 [category] ="cat1"></app-productdemo1>
-<app-productdemo1 [category] ="cat2"></app-productdemo1>
+<!-- <app-productdemo1 [cat] ="cat1"></app-productdemo1> -->
+<!-- <app-productdemo1 [category] ="cat2"></app-productdemo1>
 <app-productdemo1 [category] ="cat3"></app-productdemo1>
-<app-productdemo1 [category] ="cat4"></app-productdemo1>
+<app-productdemo1 [category] ="cat4"></app-productdemo1> -->
+<app-filter-options (onOptionClick)="sortList($event)"></app-filter-options>
+
+<hr>
+
+<app-employee-list [sortValue]="sortOption"></app-employee-list>
 
 
 

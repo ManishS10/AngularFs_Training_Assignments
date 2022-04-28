@@ -9,10 +9,20 @@ import { Product } from '../models/productdemo';
 export class AppComponent {
   title = 'my-project';
 
-   cat1:string ="Footwear";
-   cat2:string ="Electronics";
-   cat3:string ="Clothing";
-   cat4:string ="Furniture";
+  //filter:string="sortEvent";
+
+  //  cat1:string ="Footwear";
+  //  cat2:string ="Electronics";
+  //  cat3:string ="Clothing";
+  //  cat4:string ="Furniture";
+
+  sortOption:string = ""; 
+
+  sortList(value:string){
+    this.sortOption = value;
+  }
+
+   
 
   
 }
