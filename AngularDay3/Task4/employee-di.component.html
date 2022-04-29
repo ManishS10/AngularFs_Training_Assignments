@@ -1,0 +1,54 @@
+<h3>Working with Services in Angular</h3>
+<hr/>
+
+<label>Emp Id :</label>
+<input type="text" [(ngModel)]="empid" minlength="1">
+&nbsp;
+
+<label>Emp Name :</label>
+<input type="text" [(ngModel)]="empname" minlength="3" maxlength="10">
+&nbsp;
+
+<label>Emp Job :</label>
+<input type="text" [(ngModel)]="empjob" minlength="3">
+&nbsp;
+
+<label>Emp Salary :</label>
+<input type="text" [(ngModel)]="empsalary" minlength="3" max="1000000">
+&nbsp;
+
+<label>Emp Deptno :</label>
+<input type="number" [(ngModel)]="empdeptno">
+&nbsp;
+
+<br>
+<br>
+<button (click)="addData_click()">Add Data</button>
+&nbsp;
+
+<button (click)="getData_click()">Get Data</button>
+
+ <br/><br/>
+ <table width="500"  cellspacing="0"  cellpadding="3"  border="2">
+  <tr>
+    <th>Emp Number</th>
+    <th>Emp Name</th>
+    <th>Emp Job</th>
+    <th>Emp Salary</th>
+    <th>Emp Deptno</th>
+    <th></th>
+  </tr>
+
+  <tr *ngFor="let item of empsArray">
+      <td>{{item.empId}}</td>
+      <td>{{item.empName | titlecase}}</td>
+      <td>{{item.empJob | uppercase}}</td>
+      <td>{{item.empSalary | currency}}</td>
+      <td>{{item.empDeptno}}</td>
+      <td><a href="javascript:void(0);" (click)="deleteData_click(item.id)">
+          <img src="../../assets//delete.png" width="30px" heigh="20px">
+      </a></td>
+  </tr>
+</table>
+
+<hr/>
