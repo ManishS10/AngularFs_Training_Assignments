@@ -1,0 +1,34 @@
+<h1>Employee Salary Pipe</h1>
+<hr>
+
+<label>Salary Property Filter:</label>
+
+&nbsp;
+
+<label>Min Value:</label>
+<input type="text" [(ngModel)] ="filtervalue1">
+
+<label>Max Value:</label>
+<input type="text" [(ngModel)] ="filtervalue2">
+
+<button (click)="filterdata_click()">Get Data</button>
+<br><br>
+
+<table border="2px" cellspacing="0px" cellpadding="2px" width="300px">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Job</th>
+        <th>Salary</th>
+        <th>Department</th>
+    </tr>
+
+    <tr *ngFor="let item of emplist | salaryfilterpipe: key : value1 : value2 ">
+        <td>{{item.empId}}</td>
+        <td>{{item.empName | titlecase}}</td>
+        <td>{{item.empJob | uppercase}}</td>
+        <td>{{item.empSalary | currency}}</td>
+        <td>{{item.empDeptno}}</td>
+    </tr>
+
+</table>
