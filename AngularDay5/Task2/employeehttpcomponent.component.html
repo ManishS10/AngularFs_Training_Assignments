@@ -1,0 +1,47 @@
+
+<h1>Employee Http Component</h1>
+<style>
+
+*{
+    box-sizing: border-box;
+}
+
+.btn
+{
+    background-color: aqua;
+    text-align:center;
+    width: 1000px;
+}
+.c1
+{
+    float:left;
+    border:2px solid black;
+    border-radius: 2px;
+    box-shadow: 5px;
+    margin:10px;
+    padding-left: 10px;
+    width:max-content;
+}
+p
+{
+    align-items: center;
+    justify-content: center;
+}
+img
+{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+</style>
+
+<div class="btn">
+    <button (click)="getusers()">Get Users</button>
+</div>
+
+
+<div class="c1" *ngFor="let item of userArray">
+    <img height="160px" width="100px" src="{{item.avatar}}" alt="Avatar">
+    <p style="font-weight:bolder">{{item.first_name +""+ item.last_name}}</p>
+    <p>{{item.email}}</p>
+</div>
