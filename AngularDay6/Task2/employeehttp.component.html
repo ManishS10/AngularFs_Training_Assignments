@@ -1,0 +1,109 @@
+
+<style>
+
+.container1
+{
+    margin:10px;
+    background-color: azure;
+}   
+
+button {
+  background-image: linear-gradient(rgb(6, 165, 6), #062007);
+  border: 2px solid black;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 2px;
+  margin: 8px;
+  transition-duration: 0.4s;
+}
+
+button:hover 
+{
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+a:visited
+{
+    background-color:blue;
+}
+
+.container3
+{
+  text-align: center;
+  border: 3px solid green;
+  line-height: 30px;
+  height: 200px;
+}
+.container
+{
+    background-image: linear-gradient(rgb(9, 146, 9), #bce409e3);
+    
+    height:50px;
+    padding:10px;
+}
+
+</style>
+
+<div class="container">
+    <h3>Perform CRUD operations with remote data in Angular</h3>
+</div>
+
+<hr/>
+
+<div class="container1">
+    <fieldset>
+        <input type="text"  [(ngModel)]="empName"  placeholder="Employee Name"  />
+        <input type="text"  [(ngModel)]="empJob"  placeholder="Job"  />
+        <input type="text"  [(ngModel)]="empSalary"  placeholder="Salary"  />
+        <input type="text"  [(ngModel)]="empDeptno"  placeholder="Dept No"  />
+    </fieldset>
+</div>
+<!-- <input type="button"  value="Get Employee" (click)="getData_click()"  />
+<input type="button"  value="Add Employee" (click)="addData_click()"  />
+<input type="button"  value="Update Employee" (click)="updateData_click()"  /> -->
+<div class="container2">
+    <button (click)="getData1_click()">Get Employee By Job</button>
+    <button (click)="getData2_click()">Manager Name in the Department</button>
+    <button (click)="getData3_click()">Employee Not Working in Depart 10</button>
+    <button (click)="getData4_click()">Employee Name and Designation</button>
+    <button (click)="getData5_click()">Sort Employee on basis of Salary</button>
+    <button (click)="clearFields()">Clear</button>
+    <hr/>
+</div>
+
+<!-- <table border="2"   cellspacing="0">
+	<tr>
+	  <th>Employee Id</th>
+	  <th>Employee Name</th>
+	  <th>Job</th>
+	  <th>Salary</th>
+	  <th>Dept No</th>
+    <th></th>
+	</tr>
+
+	<tr *ngFor="let item of employeeArray">
+	  <td>{{item.empId}}</td>
+	  <td>{{item.empName}}</td>
+	  <td>{{item.empJob}}</td>
+	  <td>{{item.empSalary}}</td>
+	  <td>{{item.empDeptno}}</td>
+    <td align="center">
+      <a href="javascript:void(0);" (click)="selectData_click(item.empId)">Select</a> |
+      <a href="javascript:void(0);" (click)="deleteData_click(item.empId)">Delete</a>
+    </td>
+	</tr>
+
+    <tr *ngIf="employeeArray.length == 0">
+            <td colspan="4">** No Records</td>
+        
+    </tr>
+  </table> -->
+  <div class="container3">
+    <P>{{result|json}}</P>
+  </div>
+         
+   
