@@ -1,0 +1,39 @@
+{
+  "employees": [
+    {
+      "empId": 1,
+      "empName": "Scott",
+      "empJob": "IT",
+      "empSalary": 10000,
+      "empDeptno": 32
+    },
+    {
+      "empId": 2,
+      "empName": "Mary",
+      "empJob": "Finance",
+      "empSalary": 50000,
+      "empDeptno": 31
+    },
+    {
+      "empId": 3,
+      "empName": "Madhav",
+      "empJob": "Billing",
+      "empDeptno": "35",
+      "empSalary": "8900"
+    },
+    {
+      "empId": 4,
+      "empName": "Jersey",
+      "empJob": "Audit",
+      "empDeptno": "90",
+      "empSalary": "7890"
+    },
+    {
+      "empId": 5,
+      "empName": "Rose",
+      "empJob": "IT",
+      "empDeptno": 32,
+      "empSalary": "13456"
+    }
+  ]
+}
