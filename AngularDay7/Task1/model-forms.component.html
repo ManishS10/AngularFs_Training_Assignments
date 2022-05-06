@@ -1,0 +1,72 @@
+<style>
+
+.error
+{
+    color:red;
+}
+</style>
+
+<h1>Vechicle Registration Form!</h1>
+
+
+<form [formGroup]="registrationForm" (submit)="submit_click()">
+    <fieldset>
+        <legend>Customer Registration Form</legend>
+  
+        Owner Name:
+        <input type="text" formControlName="ownername"  />
+        <span *ngIf="registrationForm.controls['ownername'].invalid && registrationForm.controls['ownername'].dirty" class="error"> Name is required</span>
+  
+        <br/><br/>
+  
+        Contact No:
+        <input type="number" formControlName="contactno"  />
+        <span *ngIf="registrationForm.controls['contactno'].invalid && registrationForm.controls['contactno'].dirty" class="error">Contact Number is required</span>
+        <br/><br/>
+  
+  
+        City Name  : <input formControlName="city"  />
+        <span  class="error"  *ngIf="registrationForm.controls['city'].invalid && registrationForm.controls['city'].dirty">
+        No. of characters should be in between 3 and 10
+        </span>
+        <br><br>
+  
+       E-mail  :
+        <input  formControlName="owneremail"  />
+        <span  class="error"  *ngIf="registrationForm.controls['owneremail'].invalid && registrationForm.controls['owneremail'].dirty">
+        Enter proper e-mail id
+        </span>
+        <br><br>
+  
+        Registration No :
+        <input 	formControlName="vechicleregno"  />
+        <span  class="error"  *ngIf="registrationForm.controls['vechicleregno'].invalid && registrationForm.controls['vechicleregno'].dirty">
+          Registration No is Required.
+        </span>
+        <br><br>
+
+        Color :
+        <input 	formControlName="color"  />
+        <span  class="error"  *ngIf="registrationForm.controls['color'].invalid && registrationForm.controls['color'].dirty">
+          Color is Required.
+            </span>
+        <br><br>
+
+      Address :
+        <input 	formControlName="address"  />
+        <span  class="error"  *ngIf="registrationForm.controls['address'].invalid && registrationForm.controls['address'].dirty">
+          Address is Required.
+        </span>
+        <br><br>
+
+      Year :
+        <input 	formControlName="year"  />
+        <span  class="error"  *ngIf="registrationForm.controls['year'].invalid && registrationForm.controls['year'].dirty">
+          Year should be between 2012 - 2020.
+        </span>
+        <br><br>
+
+  
+        <button [disabled]="registrationForm.invalid">Register</button>
+    </fieldset>
+  </form>
