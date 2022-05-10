@@ -1,0 +1,45 @@
+
+<style>
+.container
+{
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+}
+</style>
+
+
+<div class="container" style="padding: 10px;">
+    <h3 align="center">Angular Templates (UI) Development using Angular Material</h3>
+    <hr/>
+
+<mat-card>
+    <mat-card-title>Login</mat-card-title>
+    <p>
+        <mat-form-field appearance="outline">
+          <mat-label>UserName</mat-label>
+          <input matInput placeholder="Enter UserName" [(ngModel)]="username">
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="outline">
+          <mat-label>Password</mat-label>
+          <input type ="password" matInput placeholder="Enter PassWord" [(ngModel)]="password">
+          
+        </mat-form-field>
+    </p>
+
+    <button mat-raised-button color="primary" (click)="button_clicked()">Submit</button>
+
+</mat-card>
+
+    
+
+
+    
+
+</div>
+
+
+
