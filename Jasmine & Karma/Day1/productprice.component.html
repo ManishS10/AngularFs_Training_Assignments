@@ -1,0 +1,45 @@
+<style>
+
+    .result
+    {
+        margin:10px;
+        padding: 10px;
+    }
+</style>
+
+<fieldset>
+    <legend>Price Calculator</legend>
+
+    <mat-card>
+        <mat-card-title>Price Calculator</mat-card-title>
+        
+            <p>
+                <mat-card-subtitle>Product Name: </mat-card-subtitle>
+                <mat-form-field appearance="outline">
+                    <mat-label>Product Name</mat-label>
+                    <input type="text" matInput placeholder="Enter Product Name" [(ngModel)]="productName"> 
+                </mat-form-field>
+            </p>
+        
+            <p>
+                <mat-card-subtitle>Unit Price: </mat-card-subtitle>
+                <mat-form-field appearance="outline">
+                    <mat-label>Unit Price</mat-label>
+                    <input type="number" matInput placeholder="Enter Unit Price" [(ngModel)]="unitPrice"> 
+                </mat-form-field>
+            </p>
+
+            <p>
+                <mat-card-subtitle>Quantity: </mat-card-subtitle>
+                <mat-form-field appearance="outline">
+                    <mat-label>Quantity</mat-label>
+                    <input type="number" matInput placeholder="Enter Quantity" [(ngModel)]="quantity"> 
+                </mat-form-field>
+            </p>
+
+        <button (click) ="btn_click()">Get Total</button>
+
+        <span>{{result}}</span>
+
+    </mat-card>
+</fieldset>
