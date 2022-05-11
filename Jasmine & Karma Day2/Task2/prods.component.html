@@ -1,0 +1,4 @@
+<app-prod-list  *ngFor="let item of productArr"
+								[item]="productArr"
+								(onremoveprod)="onremoveproduct($event)">
+</app-prod-list>
